@@ -109,7 +109,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
     <script type="text/javascript">
-
+    //method for initializing the firebase database
     var config = {
         apiKey: "AIzaSyBEB1UK1LHXLOTanaD_Oewrq2IGFEgLFXU",
         authDomain: "fir-homework-7f866.firebaseapp.com",
@@ -119,7 +119,6 @@
         messagingSenderId: "1003769751176"
     };
     firebase.initializeApp(config);
-
 
     var dataStore = firebase.database();
 
@@ -156,8 +155,6 @@
         trainTime: trainTime,
         freq: freq,
         dateAdded: firebase.database.ServerValue.TIMESTAMP
-
-
         });
 
         $("#train-name-input").val('');
@@ -169,15 +166,12 @@
         destArray.push(dest);
         trainTimeArray.push(trainTime);
         freqArray.push(freq);
+    });
 
+//A method for taking the information pushed into the array, creating the table rows and columns, and 
+//loading the array data into it. 
 
-
-       
-      
-
-});
-
-
+// a method for recalling the proper data from the firebase database. 
 </script>
     
    
