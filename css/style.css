@@ -1,0 +1,15 @@
+#thomas{
+    height: 40px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th {
+    
+}
+
+panel {
+    border-width: 2px;
+    border-style: double;
+}
