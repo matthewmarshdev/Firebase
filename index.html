@@ -134,7 +134,7 @@
     var trainTimeArray = [];
     var freqArray      = [];
 
-     console.log(nameArray[0]);
+     
     
          
    //submit function. This function collects form data, puts data in 
@@ -167,6 +167,29 @@
         trainTimeArray.push(trainTime);
         freqArray.push(freq);
     });
+
+dataStore.ref().on("child_added", function(snapshot){
+    snapshot = snapshot.val();
+    
+
+    /**var tableRow = $('<tr>');
+    var rowCell  = $('<td>');
+    rowCell.text(snapshot.name);
+    tableRow.append(rowCell);
+    $('tbody').append(tableRow);
+
+
+    rowCell.text(snapshot.name);
+    rowCell.text(snapshot.name);
+    rowCell.text(snapshot.name);**/
+
+    $('tbody').append('<tr><th scope="row">1</th><td>' + snapshot.name + '</td><td>' + snapshot.dest + '</td><td>' + snapshot.trainTime + '</td><td>' + snapshot.freq + '</td></tr>');
+    
+
+});
+
+//get the info to display on the front end. get that info to display
+
 
 //A method for taking the information pushed into the array, creating the table rows and columns, and 
 //loading the array data into it. 
